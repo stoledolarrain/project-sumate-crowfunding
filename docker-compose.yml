@@ -1,0 +1,70 @@
+version: "3.8"
+
+networks:
+  app-network:
+    driver: bridge
+
+services:
+
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sumatecrowfunding 
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p$${MYSQL_ROOT_PASSWORD}"]
+      timeout: 20s
+      retries: 10
+      start_period: 10s
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=mysql      
+      - DB_USER=root
+      - DB_PASS=root
+      - DB_NAME=sumatecrowfunding
+      - DB_PORT=3306
+      - NODE_ENV=development
+      - PORT=3000
+      - GATEWAY_URL=http://gateway:3000
+    volumes:
+      - ./files:/app/uploads
+    networks:
+      - app-network
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  gateway:
+    build:
+      context: ./gateway  
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3000"      
+    environment:
+      - PORT=3000
+      - DB_HOST=mysql      
+      - DB_USER=root
+      - DB_PASSWORD=root
+      - DB_NAME=gateway 
+      
+      - PUBLIC_URL=https://lgkrwbx5-3001.brs.devtunnels.ms/
+      
+      - CONFIRMATION_HOOK_ENDPOINT=http://app:3000/api/pagos/webhook
+    networks:
+      - app-network
+    depends_on:
+      mysql:
+        condition: service_healthy

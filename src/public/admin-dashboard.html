@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Sumate</title>
+    <link rel="icon" href="img/logos/sumateLogox3125.png" type="icon" />
+    
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin-dashboard-css/admin-dashboard.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-sumate-header">
+                <img src="img/logos/sumateLogox3125.png" alt="Logo de Sumate">
+            </div>
+            <nav class="navbar-container">
+                <ul>
+                    <li><a href="#" onclick="mostrarSeccion('proyectos')">Proyectos</a></li>
+                    <li><a href="#" onclick="mostrarSeccion('admins')">Administradores</a></li>
+                    
+                    <li><a href="projects-lists.html">Ver Web</a></li>
+                    <li id="admin-name" class="user-greeting">Hola, Admin</li>
+                    <li><a href="#" id="btnLogout" class="logout-link">(Salir)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        
+        <div id="section-proyectos">
+            <div class="admin-header">
+                <h1 class="admin-title">Gestión de Proyectos</h1>
+            </div>
+            <div class="table-responsive">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Título</th>
+                            <th>Autor</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminTableBody">
+                        <tr><td colspan="5" class="loading-text">Cargando...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="section-admins" class="hidden">
+            <div class="admin-header">
+                <h1 class="admin-title">Gestión de Usuarios Admin</h1>
+                <button class="action-btn btn-approve" onclick="mostrarFormAdmin()">Nuevo Admin</button>
+            </div>
+
+            <div id="formAdminContainer" class="admin-form-container hidden">
+                <h3 id="formAdminTitle" class="form-title">Nuevo Administrador</h3>
+                
+                <form id="formAdmin">
+                    <input type="hidden" id="adminId">
+                    
+                    <div class="form-grid">
+                        <input type="text" id="adminNombre" class="admin-input" placeholder="Nombre Completo" required>
+                        <input type="email" id="adminEmail" class="admin-input" placeholder="Correo" required>
+                        <input type="text" id="adminPass" class="admin-input" placeholder="Contraseña" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="action-btn btn-reject" onclick="ocultarFormAdmin()">Cancelar</button>
+                        <button type="submit" class="action-btn btn-approve">Guardar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="table-responsive">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Fecha Registro</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="adminsTableBody">
+                        <tr><td colspan="5" class="loading-text">Cargando admins...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+.admin-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.admin-title {
+  color: #d24907;
+  font-size: 28px;
+  margin: 0;
+}
+
+.user-greeting {
+  font-weight: bold;
+  color: #333;
+}
+
+.logout-link {
+  color: #e74c3c !important;
+  font-weight: bold;
+}
+
+.admin-form-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  margin-top: 0;
+  color: #d24907;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.admin-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.form-actions {
+  text-align: right;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.admin-table th {
+  background-color: #f47f11;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.admin-table tr:hover {
+  background-color: #fff8f0;
+}
+
+.loading-text {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  padding: 30px;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.bg-borrador {
+  background-color: #95a5a6;
+}
+.bg-revision {
+  background-color: #3498db;
+}
+.bg-observado {
+  background-color: #f39c12;
+}
+.bg-publicado {
+  background-color: #27ae60;
+}
+.bg-rechazado {
+  background-color: #c0392b;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 5px;
+  color: white;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+}
+
+.btn-approve {
+  background-color: #f39c12;
+}
+.btn-reject {
+  background-color: #c0392b;
+}
+.btn-observe {
+  background-color: #f39c12;
+}
+
+.no-actions {
+  color: #888;
+  font-style: italic;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

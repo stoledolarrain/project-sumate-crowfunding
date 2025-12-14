@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Proyecto - Sumate</title>
+    <link rel="icon" href="img/logos/sumateLogox3125.png" type="icon" />
+    
+    <link rel="stylesheet" href="css/crear-project.css/crear-project.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <form id="formCrearProyecto" class="project-form">
+            <div class="form-header">
+                <img src="img/logos/sumateLogox3125.png" alt="logo Sumate" class="logo-sumate"/>
+                <h1 class="project-title">Editar Campaña</h1>
+            </div>
+
+            <div class="form-section">
+                <label>Título del Proyecto</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Ej: Refugio Huellitas" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-section half">
+                    <label>Categoría</label>
+                    <select id="categoria_id" name="categoria_id">
+                        <option value="1">Tecnología</option>
+                        <option value="2">Social</option>
+                        <option value="3">Salud</option>
+                        <option value="4">Arte</option>
+                        <option value="5">Negocios</option>
+                    </select>
+                </div>
+                <div class="form-section half">
+                    <label>Meta (Bs)</label>
+                    <input type="number" id="meta" name="meta" placeholder="Ej: 5000" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label>Fecha Límite</label>
+                <input type="date" id="fecha_limite" name="fecha_limite" required>
+            </div>
+
+            <div class="form-section">
+                <label>Historia de la campaña</label>
+                <textarea id="descripcion" name="descripcion" placeholder="Cuenta detalladamente de qué trata tu proyecto..." required></textarea>
+            </div>
+
+            <div class="images-section">
+                <h3>Galería de Fotos</h3>
+                <p class="hint">La primera foto será tu portada.</p>
+                
+                <div class="file-input-wrapper">
+                    <label>1. Foto Portada (Obligatoria)</label>
+                    <input type="file" name="imagenes" accept="image/*" required>
+                </div>
+
+                <div class="file-input-wrapper">
+                    <label>2. Foto Extra (Opcional)</label>
+                    <input type="file" name="imagenes" accept="image/*">
+                </div>
+
+                <div class="file-input-wrapper">
+                    <label>3. Foto Extra (Opcional)</label>
+                    <input type="file" name="imagenes" accept="image/*">
+                </div>
+
+                <div class="file-input-wrapper">
+                    <label>4. Foto Extra (Opcional)</label>
+                    <input type="file" name="imagenes" accept="image/*">
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn-submit">PUBLICAR PROYECTO</button>
+                <a href="projects-lists.html" class="btn-cancel">Cancelar</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/edit-project.js"></script>
+</body>
+</html>

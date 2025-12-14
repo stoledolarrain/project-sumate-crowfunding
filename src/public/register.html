@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logos/sumateLogox3125.png" type="icon" />
+    <link rel="stylesheet" href="css/register-css/register-style.css" />
+    <title>Registro - Sumate</title>
+  </head>
+  <body>
+    <form class="register-form" id="registerForm">
+      <img
+        src="img/logos/sumateLogox3125.png"
+        alt="logo Sumate"
+        class="logo-sumate"
+      />
+      <h1 class="register-title">Registrarse</h1>
+
+      <input type="text" id="name" placeholder="Nombre Completo" />
+      <small id="errorName"></small>
+      <input type="email" id="email" placeholder="Correo Electrónico" />
+      <small id="errorEmail"></small>
+      <input type="password" id="password" placeholder="Contraseña" />
+      <small id="errorPassword"></small>
+      <button type="submit">Registrarse</button>
+
+      <div id="mensajeGlobal" style="margin-top: 15px; font-weight: bold"></div>
+
+      <p class="message">
+        Ya tienes una cuenta?<br />
+        <a href="login.html">Inicia Sesión Aquí</a>
+      </p>
+    </form>
+
+    <script src="js/register.js"></script>
+  </body>
+</html>

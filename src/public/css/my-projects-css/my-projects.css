@@ -1,0 +1,127 @@
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-title {
+  color: #d24907;
+  font-size: 28px;
+  margin: 0;
+}
+
+.btn-create {
+  background-color: #f47f11;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn-create:hover {
+  background-color: #218838;
+}
+
+.user-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.projects-table th,
+.projects-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.projects-table th {
+  background-color: #f47f11;
+  color: white;
+  font-weight: bold;
+}
+
+.loading-cell {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+.error-msg {
+  color: red;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+.bg-borrador {
+  background-color: #95a5a6;
+}
+.bg-publicado {
+  background-color: #2ecc71;
+}
+.bg-rechazado {
+  background-color: #e74c3c;
+}
+.bg-revision {
+  background-color: #3498db;
+}
+.bg-observado {
+  background-color: #f39c12;
+}
+
+.action-btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 5px;
+  color: white;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+}
+
+.btn-play {
+  background-color: #2ecc71;
+}
+.btn-pause {
+  background-color: #f39c12;
+}
+.btn-delete {
+  background-color: #c0392b;
+}
+.btn-edit {
+  background-color: #f47f11;
+}

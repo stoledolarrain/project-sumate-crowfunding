@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="img/logos/sumateLogox3125.png"
+      type="icon"
+    />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="css/project-details-css/details.css"
+    />
+
+    <title>Súmate | Detalles</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="logo-sumate-header">
+          <img
+            src="img/logos/sumateLogox3125.png"
+            alt="Logo de Sumate"
+          />
+        </div>
+        <nav class="navbar-container">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects-lists.html">Proyectos</a></li>
+            <li id="nav-auth"><a href="login.html">Iniciar Sesión</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <section class="project-detail">
+      
+      <p id="loadingMsg" class="loading-msg">Cargando detalles...</p>
+
+      <div class="project-detail-wrapper hidden" id="contentWrapper">
+        <div class="left">
+          <figure class="main-media">
+            <img
+              id="mainImage"
+              src=""
+              alt="Imagen principal"
+            />
+          </figure>
+
+          <div class="miniaturas" id="galleryContainer">
+            </div>
+        </div>
+
+        <div class="right">
+          <div class="head">
+            <h1 class="title" id="projectTitle"></h1>
+            <div class="meta">
+              Campaña creada por <strong id="projectAuthor"></strong>
+            </div>
+          </div>
+
+          <div class="stats">
+            <div class="progress-label"><strong id="progressPercent">0% logrado</strong></div>
+            <div class="progress">
+              <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="raised">
+              Recaudado: <strong id="amountRaised">Bs 0</strong> de Bs <span id="amountGoal">0</span>
+            </div>
+
+            <button class="btn-donate" id="btnDonate">Donar Ahora</button>
+            
+            <button class="btn-favorite hidden" id="btnFavorite">Guardar en Favoritos</button>
+          </div>
+
+          <div class="section">
+            <h2 class="subtitle">Historia de la campaña</h2>
+            <p class="story" id="projectDescription"></p>
+          </div>
+          
+          <div class="back-container">
+             <a href="projects-lists.html" class="back-link">&larr; Volver a la lista</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+    <script src="js/project-details.js"></script>
+  </body>
+</html>

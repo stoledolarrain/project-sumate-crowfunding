@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Proyectos - Sumate</title>
+    <link rel="icon" href="img/logos/sumateLogox3125.png" type="icon" />
+    
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/my-projects-css/my-projects.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-sumate-header">
+                <img src="img/logos/sumateLogox3125.png" alt="Logo">
+            </div>
+            <nav class="navbar-container">
+                <ul>
+                    <li><a href="projects-lists.html">Volver a la Lista</a></li>
+                    <li id="user-name" class="user-name">Hola, Usuario</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Mis Proyectos</h1>
+            <a href="crear-project.html" class="btn-create">Crear Nuevo</a>
+        </div>
+
+        <div class="table-responsive">
+            <table class="projects-table">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Estado Aprobación</th>
+                        <th>Estado Campaña</th>
+                        <th>Recaudado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="myProjectsBody">
+                    <tr>
+                        <td colspan="5" class="loading-cell">Cargando tus proyectos...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/my-projects.js"></script>
+</body>
+</html>

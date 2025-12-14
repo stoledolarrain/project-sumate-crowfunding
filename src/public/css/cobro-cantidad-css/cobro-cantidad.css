@@ -1,0 +1,87 @@
+body {
+  background-color: #f5f5f5;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  margin: 0;
+}
+
+.payment-card {
+  background-color: white;
+  width: 400px;
+  max-width: 90%;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.payment-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #333;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-bottom: 5px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input[type="number"]:focus {
+  border-color: #007bff;
+}
+
+.error-msg {
+  display: block;
+  text-align: left;
+  color: #dc3545;
+  font-size: 12px;
+  min-height: 20px;
+  margin-bottom: 15px;
+}
+
+.btn-pay {
+  width: 100%;
+  padding: 12px;
+  background-color: #f47f11;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-pay:hover {
+  background-color: #d24907;
+}
+
+.cancel-link {
+  display: block;
+  margin-top: 15px;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cancel-link:hover {
+  text-decoration: underline;
+}

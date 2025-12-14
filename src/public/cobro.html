@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escanear QR - Sumate</title>
+    <link rel="icon" href="img/logos/sumateLogox3125.png" type="icon" />
+    <link rel="stylesheet" href="css/cobro-css/cobro.css">
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="card-qr">
+            <h1 class="titulo">Pagar</h1>
+            
+            <div class="qr-container">
+                <img id="qrImage" src="img/loading-qr.gif" alt="Cargando QR..." class="imagen-qr">
+            </div>
+
+            <div class="info-monto">
+                <p class="etiqueta">Monto a Pagar:</p>
+                <h2 id="montoDisplay" class="precio">Bs 0.00</h2>
+            </div>
+
+            <p class="instrucciones">
+                Abre tu aplicación bancaria y escanea este código para confirmar la donación.
+            </p>
+
+            <a href="#" id="btnVolver" class="boton-volver">Cancelar / Volver</a>
+
+            <button id="btnConfirmarPago" style="display: none;">Confirmar</button>
+        </div>
+
+    </div>
+
+    <script src="js/cobro.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/login-css/login-style.css" />
+    <link
+      rel="icon"
+      href="img/logos/sumateLogox3125.png"
+      type="icon"
+    />
+    <title>Login - Sumate</title>
+  </head>
+  <body>
+    <form class="login-form" id="formLogin">
+      <img
+        src="img/logos/sumateLogox3125.png"
+        alt="logo Sumate"
+        class="logo-sumate"
+      />
+      <h1 class="login-title">Inicia Sesión</h1>
+      
+      <input type="email" id="email" placeholder="Correo Electrónico" />
+      <small id="errorEmail"></small> <input
+        type="password"
+        id="password"
+        placeholder="Contraseña"
+      />
+      <small id="errorPassword"></small> <button type="submit">Acceder</button>
+      
+      <div id="mensajeGlobal"></div>
+
+      <p class="message">
+        No tiene cuenta?<br />
+        <a href="register.html">Registrarse</a>
+      </p>
+    </form>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

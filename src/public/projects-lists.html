@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logos/sumateLogox3125.png" type="icon" />
+
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/projects-list-css/projects-list.css" />
+
+    <title>Súmate | Proyectos</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="logo-sumate-header">
+          <img src="img/logos/sumateLogox3125.png" alt="Logo de Sumate" />
+        </div>
+        <nav class="navbar-container">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects-lists.html">Proyectos</a></li>
+            <li id="nav-auth"><a href="login.html">Iniciar Sesión</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="projects">
+      <div class="projects-wrapper">
+        <div class="projects-header">
+          <h2 class="projects-title">Proyectos</h2>
+
+          <div class="projects-controls">
+            <a href="admin-dashboard.html" id="btnAdminPanel"> Panel Admin </a>
+            <a href="my-projects.html" id="btnMisProyectos"> Mis Proyectos </a>
+            <a href="favoritos.html" id="btnFavoritos">Favoritos </a>
+
+            <a href="crear-project.html" id="btnCrearProyecto">
+              Crear Proyecto
+            </a>
+
+            <label class="projects-filter">
+              <span class="filter-label">Categoría</span>
+              <select
+                class="filter-select"
+                name="categoria"
+                id="categoriaFilter"
+              >
+                <option value="todas">Todas</option>
+                <option value="1">Tecnología</option>
+                <option value="2">Social</option>
+                <option value="3">Salud</option>
+                <option value="4">Arte</option>
+                <option value="5">Negocios</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectsContainer">
+          <p class="loading-msg">Cargando proyectos...</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/projects-list.js"></script>
+  </body>
+</html>

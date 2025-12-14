@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="noindex" />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin" />
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp" />
+    <title>Escáner QR - Confirmar Pago</title>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main-card">
+      <h3 class="card-title">Billetera Movil</h3>
+
+      <div class="scanner-container">
+        <div id="reader"></div>
+      </div>
+
+      <div id="paymentInfo"></div>
+
+      <button
+        type="button"
+        id="btn-scan"
+        class="btn btn-primary"
+        onclick="startScanner()"
+      >
+        Escanear QR
+      </button>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

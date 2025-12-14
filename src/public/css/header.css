@@ -1,0 +1,89 @@
+.header {
+  background-color: #c1c0c0;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 16px;
+}
+
+.logo-sumate-header img {
+  width: 64px;
+  height: auto;
+  display: block;
+}
+
+.navbar-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-container li {
+  list-style: none;
+  margin: 6px 0;
+  border: 1px solid black;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+}
+
+.navbar-container a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 8px 0;
+}
+
+@media (min-width: 760px) {
+  .header-container {
+    max-width: 760px;
+    height: 80px;
+    padding: 0 16px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    font-size: 18px;
+  }
+
+  .logo-sumate-header img {
+    width: 50px;
+  }
+
+  .navbar-container ul {
+    flex-direction: row;
+  }
+
+  .navbar-container li {
+    margin: 0 0 0 24px;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-container {
+    max-width: 1200px;
+    padding: 0 20px;
+    font-size: 20px;
+  }
+
+  .logo-sumate-header img {
+    width: 56px;
+  }
+
+  .navbar-container li {
+    margin-left: 40px;
+    border: none;
+    padding: 0;
+  }
+}
